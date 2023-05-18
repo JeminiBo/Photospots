@@ -123,8 +123,9 @@ android {
         applicationId "com.photospots"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
+        versionCode 4
         versionName "0.0.1"
+        missingDimensionStrategy "store", "play"
     }
 
     splits {
