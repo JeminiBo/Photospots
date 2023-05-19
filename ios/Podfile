@@ -21,7 +21,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'Photospots' do
+abstract_target 'PhotospotsCommonPods' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -42,6 +42,12 @@ target 'Photospots' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+
+  target 'Photospots Dev' do
+  end
+ 
+  target 'Photospots' do
+  end
 
   target 'PhotospotsTests' do
     inherit! :complete
