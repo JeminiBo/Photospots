@@ -8,7 +8,7 @@ import {
 import {withIAPContext} from 'react-native-iap';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {Purchase} from './src/Purchase';
+import {FirebasePage} from './src/pages/firebase';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -26,7 +26,7 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Purchase />
+        <FirebasePage />
       </ScrollView>
     </SafeAreaView>
   );

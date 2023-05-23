@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply plugin: 'com.google.gms.google-services'
 
 project.ext.envConfigFiles = [
    productiondebug: ".env.production",
@@ -102,7 +103,7 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-     flavorDimensions "default"
+    flavorDimensions "default"
     productFlavors {
         production {
             minSdkVersion rootProject.ext.minSdkVersion
@@ -202,6 +203,11 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+    implementation 'com.google.firebase:firebase-appcheck-safetynet:16.1.2'
 }
 
+apply plugin: 'com.google.gms.google-services'
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
