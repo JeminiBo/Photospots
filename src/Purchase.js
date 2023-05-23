@@ -48,6 +48,23 @@ const Purchase = () => {
     }
   };
 
+  const getActiveSubscriptions = async () => {
+    try {
+      const currentAvailablePurchases = await getAvailablePurchases();
+      // Filter active subscriptions
+      const activeSubscriptions = currentAvailablePurchases.filter(purchase => {
+        // Check if the subscription is active, based on your specific use case
+        return (
+          purchase.productId === 'your_subscription_product_id' &&
+          purchase.transactionReceipt
+        );
+      });
+      console.log('Active subscriptions:', activeSubscriptions);
+    } catch (err) {
+      console.warn(err); // standardized err.code and err.message available
+    }
+  };
+
   useEffect(() => {
     // ... listen to currentPurchaseError, to check if any error happened
     console.log('CURRENT PURCHASE ERROR', currentPurchaseError);
