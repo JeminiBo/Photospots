@@ -24,6 +24,9 @@ end
 abstract_target 'PhotospotsCommonPods' do
   config = use_native_modules!
 
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
+
   # Flags change depending on the env values.
   flags = get_default_flags()
 
@@ -38,7 +41,7 @@ abstract_target 'PhotospotsCommonPods' do
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
-    :flipper_configuration => flipper_config,
+    # :flipper_configuration => flipper_config,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
@@ -62,5 +65,6 @@ abstract_target 'PhotospotsCommonPods' do
       :mac_catalyst_enabled => false
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    
   end
 end
