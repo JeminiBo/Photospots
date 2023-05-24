@@ -14,7 +14,7 @@ rnfbProvider.configure({
   },
   apple: {
     provider: __DEV__ ? 'debug' : 'appAttestWithDeviceCheckFallback',
-    debugToken: 'B3D34113-95E0-4FDF-8CE4-C3DAA8CAEBD3',
+    debugToken: '4030A6C8-12D0-47E4-8B0D-2DDB738727C3',
   },
   web: {
     provider: 'reCaptchaV3',
