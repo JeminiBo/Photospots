@@ -72,7 +72,7 @@ class Firebase {
       uid,
       role,
     });
-    await isUserHaveRole(role);
+    await this.isUserHaveRole(role);
   };
 
   isUserHaveRole = async roleName => {
