@@ -72,8 +72,13 @@ const Purchase = () => {
       <Button
         title="Get the products"
         onPress={() => {
-          getProducts({skus: ['123jl13lk13']});
-          getSubscriptions({skus: ['123jksdsa123']});
+          getProducts({
+            skus: Platform.OS === 'ios' ? ['fasfas4324asaf'] : ['123jl13lk13'],
+          });
+          getSubscriptions({
+            skus:
+              Platform.OS === 'ios' ? ['asdsad32432fsaf'] : ['123jksdsa123'],
+          });
         }}
       />
 

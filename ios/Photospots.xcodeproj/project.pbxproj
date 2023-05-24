@@ -18,6 +18,8 @@
 		9765F5CE2A1775FE00B22405 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		9765F5D22A1775FE00B22405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9765F5D32A1775FE00B22405 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		9765F5DD2A177B2000B22405 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9765F5DC2A177B2000B22405 /* StoreKit.framework */; };
+		9765F5DE2A177B2F00B22405 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9765F5DC2A177B2000B22405 /* StoreKit.framework */; };
 		BE796F685C033E66F9D21EB9 /* libPods-PhotospotsCommonPods-PhotospotsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B061D2870A87C9E994E1CDF /* libPods-PhotospotsCommonPods-PhotospotsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		9374CF8EDB1D7C371DD5A78D /* Pods-PhotospotsCommonPods-Photospots Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotospotsCommonPods-Photospots Dev.debug.xcconfig"; path = "Target Support Files/Pods-PhotospotsCommonPods-Photospots Dev/Pods-PhotospotsCommonPods-Photospots Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		9765F5DA2A1775FE00B22405 /* Photospots Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photospots Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9765F5DB2A1775FE00B22405 /* Photospots Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Photospots Dev.plist"; path = "/Users/vartotojas/Documents/Work/Photospots/ios/Photospots Dev.plist"; sourceTree = "<absolute>"; };
+		9765F5DC2A177B2000B22405 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A077D9193EC792405DD9ACB5 /* libPods-PhotospotsCommonPods-Photospots Dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotospotsCommonPods-Photospots Dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8ACDF62AF6FCA97D41F6A6A /* libPods-PhotospotsCommonPods-Photospots.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotospotsCommonPods-Photospots.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25A061DCB513BE3FE27B298 /* Pods-PhotospotsCommonPods-PhotospotsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotospotsCommonPods-PhotospotsTests.release.xcconfig"; path = "Target Support Files/Pods-PhotospotsCommonPods-PhotospotsTests/Pods-PhotospotsCommonPods-PhotospotsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D0445A1C192B65342E6888 /* libPods-PhotospotsCommonPods-Photospots.a in Frameworks */,
+				9765F5DE2A177B2F00B22405 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4635C234B57962C648E3DE84 /* libPods-PhotospotsCommonPods-Photospots Dev.a in Frameworks */,
+				9765F5DD2A177B2000B22405 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +126,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9765F5DC2A177B2000B22405 /* StoreKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				A8ACDF62AF6FCA97D41F6A6A /* libPods-PhotospotsCommonPods-Photospots.a */,
 				A077D9193EC792405DD9ACB5 /* libPods-PhotospotsCommonPods-Photospots Dev.a */,
