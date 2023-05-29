@@ -1,6 +1,6 @@
-import {useState} from 'react';
-import {ScrollView, Button, View, Text} from 'react-native';
-import {FirebaseService} from '../../services/firebaseService';
+import { useState } from 'react';
+import { ScrollView, Button, View, Text } from 'react-native';
+import { FirebaseService } from '../../services/firebaseService';
 
 const FirebasePage = () => {
   const [uid, setUid] = useState(null);
@@ -38,14 +38,14 @@ const FirebasePage = () => {
       />
       <Button title="SignOut" onPress={() => FirebaseService.signOut()} />
       <View>
-        <Text style={{marginTop: 40, marginBottom: 20}}>LOCATIONS</Text>
-        {locations.map(location => (
+        <Text style={{ marginTop: 40, marginBottom: 20 }}>LOCATIONS</Text>
+        {locations.map((location) => (
           <Button
             key={location.id}
             title={location?.id || 'No name'}
             onPress={async () => {
               console.log('REF', location);
-              location.Spots.forEach(async spot => {
+              location.Spots.forEach(async (spot) => {
                 const spotDetails = await spot.SpotRef.get();
                 console.log('Spot Details', spotDetails.data());
               });
@@ -57,4 +57,4 @@ const FirebasePage = () => {
   );
 };
 
-export {FirebasePage};
+export { FirebasePage };

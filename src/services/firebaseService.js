@@ -1,8 +1,8 @@
 import firebaseAuth from '@react-native-firebase/auth';
-import functions, {firebase} from '@react-native-firebase/functions';
+import functions, { firebase } from '@react-native-firebase/functions';
 import firestore from '@react-native-firebase/firestore';
 import storage from '@react-native-firebase/storage';
-import {firebase as firebaseAppcheck} from '@react-native-firebase/app-check';
+import { firebase as firebaseAppcheck } from '@react-native-firebase/app-check';
 
 let rnfbProvider = firebaseAppcheck
   .appCheck()
@@ -34,7 +34,7 @@ class Firebase {
     });
 
     try {
-      const {token} = await firebase.appCheck().getToken(true);
+      const { token } = await firebase.appCheck().getToken(true);
 
       if (token.length > 0) {
         console.log('AppCheck verification passed');
@@ -47,11 +47,11 @@ class Firebase {
   auth = () => {
     return firebaseAuth()
       .signInAnonymously()
-      .then(data => {
+      .then((data) => {
         console.log('AUTH SUCCESS', data.user.uid);
         return data.user.uid;
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   };
@@ -62,7 +62,7 @@ class Firebase {
       .then(() => {
         console.log('SIGN OUT');
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   };
@@ -75,19 +75,19 @@ class Firebase {
     await this.isUserHaveRole(role);
   };
 
-  isUserHaveRole = async roleName => {
+  isUserHaveRole = async (roleName) => {
     const idTokenResult = await firebase
       .auth()
       .currentUser.getIdTokenResult(true);
     return idTokenResult.claims[roleName];
   };
 
-  getAllDataFromDb = async collectionName => {
+  getAllDataFromDb = async (collectionName) => {
     return await firestore()
       .collection(collectionName)
       .get()
-      .then(snapshot => {
-        const newData = snapshot.docs.map(doc => ({
+      .then((snapshot) => {
+        const newData = snapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
         }));

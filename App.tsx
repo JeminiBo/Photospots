@@ -5,10 +5,11 @@ import {
   StatusBar,
   useColorScheme,
 } from 'react-native';
-import {withIAPContext} from 'react-native-iap';
+import { withIAPContext } from 'react-native-iap';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {FirebasePage} from './src/pages/firebase';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { FirebasePage } from './src/pages/firebase';
+import { Purchase } from './src/pages/purchase';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -26,7 +27,7 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <FirebasePage />
+        <Purchase />
       </ScrollView>
     </SafeAreaView>
   );
